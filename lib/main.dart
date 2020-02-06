@@ -33,7 +33,8 @@ class page extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    var leftdice=;
+    var leftdice=Random().nextInt(6);
+    var rightdice=Random().nextInt(6);
     return Center(
       child: Row
         (
@@ -46,7 +47,7 @@ class page extends StatelessWidget
 
               child: Image.asset('images/dice$leftdice.png'),
               onPressed: (){
-                print('left');
+                leftdice=Random().nextInt(6);
               },
             ),
           ),
@@ -54,9 +55,9 @@ class page extends StatelessWidget
             (
 
               child: FlatButton(
-                child: Image.asset('images/dice1.png'),
+                child: Image.asset('images/dice$rightdice.png'),
                 onPressed: (){
-                  print('right');
+                  rightdice=Random().nextInt(6);
                 },
 
             ),
