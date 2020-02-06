@@ -1,4 +1,4 @@
-
+import 'dart:math';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
@@ -33,19 +33,37 @@ class page extends StatelessWidget
   @override
   Widget build(BuildContext context)
   {
-    return Row
-      (
-      children: <Widget>[
-        Expanded
-          (
-          child:Image.asset('images/dice1.png'),
-        ),
-        Expanded
-          (
-          child:Image.asset('images/dice1.png'),
-        ),
-      ]
+    var leftdice=;
+    return Center(
+      child: Row
+        (
+        children: <Widget>[
+          Expanded
+            (
 
+
+            child:FlatButton(
+
+              child: Image.asset('images/dice$leftdice.png'),
+              onPressed: (){
+                print('left');
+              },
+            ),
+          ),
+          Expanded
+            (
+
+              child: FlatButton(
+                child: Image.asset('images/dice1.png'),
+                onPressed: (){
+                  print('right');
+                },
+
+            ),
+          ),
+        ]
+
+      ),
     );
   }
 }
