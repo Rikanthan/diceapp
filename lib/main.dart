@@ -18,7 +18,7 @@ class Home extends StatelessWidget
         backgroundColor: Colors.green,
         appBar: AppBar(
           title: Text('Dice'),
-          backgroundColor: Colors.lightBlue,
+          backgroundColor: Colors.blue,
         ),
         body: page(),
       ),
@@ -74,15 +74,15 @@ class _page extends State<page> {
 
 
             },
-),
+          ),
 
-),
+           ),
 
-],
+         ],
 
-),
-);
-}
+        ),
+        );
+    }
 }
 
 
